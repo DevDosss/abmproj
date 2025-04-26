@@ -1,0 +1,492 @@
+/* Apply the modern font to the body and navbar */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #FFFFFF; /* White background */
+    color: #333333; /* Dark text color for contrast */
+    line-height: 1.6; /* Improved line height for better readability */
+}
+
+/* Navbar background */
+.custom-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensure it's above other content */
+    background-color: #FFFFFF; /* White navbar background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for a modern feel */
+    transition: background-color 0.3s ease-in-out; /* Smooth transition for background */
+}
+
+/* Navbar brand logo */
+.navbar-brand img {
+    height: 30px;
+    transition: transform 0.3s ease; /* Add a smooth effect to logo */
+}
+
+.navbar-brand img:hover {
+    transform: scale(1.1); /* Slight scale effect on hover */
+}
+
+/* Nav links */
+/* Add underline animation for nav links */
+.navbar-nav .nav-link {
+  position: relative;
+  color: #1E3A8A;
+  margin: 0 20px;
+  transition: color 0.3s ease, transform 0.3s ease;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -5px;
+  background-color: #2563EB;
+  transition: width 0.4s ease;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+  width: 100%;
+}
+
+/* Optional: Change color on active state */
+.navbar-nav .nav-link.active {
+  color: #2563EB;
+}
+
+
+.navbar-nav .nav-link:hover {
+    color: #2563EB; /* Lighter blue on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+.intro-section {
+    background-color: #F0F4F8; /* Light blueish background */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for section */
+}
+
+.intro-title {
+    font-size: 48px;
+    color: #1E3A8A; /* Dark blue title */
+    font-weight: 700;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out; /* Smooth title transition */
+}
+
+.intro-title:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+.intro-text {
+    font-size: 18px;
+    color: #333333;
+}
+
+.intro-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow around the image */
+}
+
+/* Modern Style for Online Safety Section - Updated Font Size */
+.online-safety-card {
+    background: linear-gradient(135deg, #f8f9fa, #ffffff);
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    padding: 3rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .online-safety-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  }
+  
+  .online-safety-card h2 {
+    font-weight: 700;
+    font-size: 3rem; /* bigger title */
+    margin-bottom: 2.5rem;
+    color: #333;
+  }
+  
+  .online-safety-card ul {
+    padding: 0;
+    list-style: none;
+  }
+  
+  .online-safety-card li {
+    font-size: 1.5rem; /* bigger text */
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: start;
+    gap: 15px;
+  }
+  
+  .online-safety-card i {
+    font-size: 2rem; /* bigger icons */
+    flex-shrink: 0;
+  }
+  
+  /* Responsive for mobile screens */
+  @media (max-width: 768px) {
+    .online-safety-card {
+      padding: 2rem;
+    }
+  
+    .online-safety-card h2 {
+      font-size: 2.2rem;
+    }
+  
+    .online-safety-card li {
+      font-size: 1.2rem;
+    }
+  
+    .online-safety-card i {
+      font-size: 1.5rem;
+    }
+  }
+
+  /* Timeline base style */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
+  }
+
+  .timeline-title h2{
+    font-weight: 700;
+    font-size: 3rem; /* bigger title */
+    margin-bottom: 2.5rem;
+    color: #333;
+  }
+  
+  /* Center line */
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: #0d6efd;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  /* Timeline item */
+  .timeline-item {
+    padding: 20px 40px;
+    position: relative;
+    width: 50%;
+  }
+  
+  /* Content inside the item */
+  .timeline-item .content {
+    background: #ffffff;
+    padding: 1.5rem 2rem;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  /* Positioning */
+  .timeline-item.left {
+    left: 0;
+    text-align: right;
+  }
+  
+  .timeline-item.right {
+    left: 50%;
+    text-align: left;
+  }
+  
+  /* Arrows (optional) */
+  .timeline-item.left::before,
+  .timeline-item.right::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    width: 20px;
+    height: 20px;
+    background-color: #0d6efd;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  .timeline-item.left::before {
+    right: -10px;
+  }
+  
+  .timeline-item.right::before {
+    left: -10px;
+  }
+  
+  /* Heading and Paragraph Styling */
+  .timeline-item h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0d6efd;
+    margin-bottom: 0.8rem;
+  }
+  
+
+  /* Inside your timeline style already */
+.timeline-item h3 i {
+    margin-right: 10px;
+    color: #0d6efd;
+  }
+  
+  .timeline-item p {
+    font-size: 1.4rem;
+    color: #444;
+  }
+  
+  /* YouTube Icon Link */
+  .youtube-link {
+    margin-left: 10px;
+    color: #ff0000;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+  }
+  
+  .youtube-link:hover {
+    color: #cc0000;
+  }
+  
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .timeline::after {
+      left: 10px;
+    }
+  
+    .timeline-item {
+      width: 100%;
+      padding-left: 30px;
+      padding-right: 10px;
+      margin-bottom: 2rem;
+    }
+  
+    .timeline-item.left,
+    .timeline-item.right {
+      left: 0;
+      text-align: left;
+    }
+  
+    .timeline-item.left::before,
+    .timeline-item.right::before {
+      left: 0;
+      transform: translateX(-50%);
+    }
+  }
+
+  .custom-card {
+    background: #ffffff;
+    border-radius: 15px;
+    border: none;
+    padding: 30px;
+    transition: box-shadow 0.3s;
+  }
+  
+  .custom-card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .custom-card h2 {
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: 700;
+  }
+  
+  .custom-card h4 {
+    font-size: 1.8rem;
+    color: #0d6efd;
+    margin-bottom: 10px;
+  }
+  
+  .custom-card h4 i {
+    margin-right: 8px;
+  }
+  
+  .custom-card p {
+    font-size: 1.3rem;
+    color: #555;
+    line-height: 1.7;
+  }
+  
+  .etiquette-card {
+    background: #f9f9f9;
+    border-radius: 15px;
+    border: none;
+    padding: 30px;
+    transition: box-shadow 0.3s, background 0.3s;
+  }
+  
+  .etiquette-card:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    background: #ffffff;
+  }
+  
+  .etiquette-card h2 {
+    font-size: 2.5rem;
+    color: #222;
+    font-weight: 700;
+  }
+  
+  .etiquette-card h4 {
+    font-size: 1.8rem;
+    color: #0d6efd;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .etiquette-card h4 i {
+    margin-right: 10px;
+    font-size: 1.5rem;
+  }
+  
+  .etiquette-card p {
+    font-size: 1.3rem;
+    color: #555;
+    line-height: 1.7;
+  }
+  
+  .document-style {
+    background: #fefefe;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 40px;
+    max-width: 100%;
+    font-family: 'Roboto', sans-serif;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .document-style:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  }
+  
+  .document-style h2 {
+    font-size: 2.8rem;
+    color: #222;
+    font-weight: 700;
+    text-align: center;
+  }
+  
+  .document-style h2 i {
+    color: #0d6efd;
+    margin-right: 10px;
+  }
+  
+  .tips-container {
+    display: flex;
+    justify-content: center; /* Centering the list */
+    align-items: center;
+    min-height: 300px; /* Make sure it's centered vertically as well */
+  }
+  
+  .tips-list {
+    padding-left: 0;
+    list-style: none;
+    font-size: 1.4rem;
+    color: #555;
+    line-height: 1.7;
+    width: 80%;
+  }
+  
+  .tips-list li {
+    margin-bottom: 15px;
+  }
+  
+  .sources {
+    background: #f5f7fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+  }
+  
+  .sources h4 {
+    font-size: 1.8rem;
+    color: #0d6efd;
+    margin-bottom: 10px;
+  }
+  
+  .sources p {
+    font-size: 1.3rem;
+    color: #555;
+    line-height: 1.6;
+  }
+
+    footer {
+        background: #f8f9fa;
+        color: #6c757d;
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.05rem; /* 📈 Increased font size */
+        line-height: 1.8;    /* 📈 Increased line height */
+        padding-top: 2.5rem;
+        border-top: 1px solid #e0e0e0;
+      }
+      
+      footer a {
+        color: #6c757d;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        font-size: 1.05rem; /* match the body font */
+      }
+      
+      footer a:hover {
+        color: #0d6efd;
+        text-decoration: underline;
+      }
+      
+      footer h6 {
+        font-weight: 700;
+        font-size: 1.3rem; /* 📈 Bigger heading */
+        margin-bottom: 1rem;
+        color: #343a40;
+      }
+      
+      footer p {
+        margin-bottom: 0.8rem;
+      }
+      
+      footer .social-icons a {
+        font-size: 1.5rem; /* 📈 Bigger social icons */
+        margin-right: 18px;
+        color: #6c757d;
+        transition: color 0.3s ease, transform 0.3s ease;
+      }
+      
+      footer .social-icons a:hover {
+        color: #0d6efd;
+        transform: scale(1.2);
+      }
+      
+      /* Section Dividers */
+      footer section {
+        border-bottom: 1px solid #e0e0e0;
+        margin-bottom: 2.5rem;
+        padding-bottom: 2.5rem;
+      }
+      
+      /* Bottom Copyright */
+      footer .p-4 {
+        background-color: rgba(0, 0, 0, 0.03) !important;
+        font-size: 1rem; /* Bigger copyright text */
+        color: #6c757d;
+      }
+      
+    
+    
+  
+  
+  
+  
+  
